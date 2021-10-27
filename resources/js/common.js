@@ -405,9 +405,10 @@ $(document).ready(function(){
 			}  
 			
 			
-		} else {
-			document.querySelector("#mouse-cursor").style.display = "none";
-		}
+		} 
+		// else {
+		// 	document.querySelector("#mouse-cursor").style.display = "none";
+		// }
 
 	}).resize();
 	
