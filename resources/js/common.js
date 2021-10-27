@@ -372,6 +372,16 @@ $(document).ready(function(){
 					});
 				});
 
+				// projectLinks
+				projectLinks.forEach(function(link) {
+					link.addEventListener("mouseover", function() {
+					mouseCursor.classList.add("thumbs_active");
+					});
+					link.addEventListener("mouseleave", function() {
+					mouseCursor.classList.remove("thumbs_active");
+					});
+				});
+
 				// gnb 메뉴 
 				navLinks.forEach(function(link) {
 					link.addEventListener("mouseover", function() {
