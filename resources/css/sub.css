@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* 서브 레이아웃 공통 s */
+body { overflow-x:hidden;}
+.cont01 { position:relative; float:left; width:100%; height:750px;  }
+/* #header {position:relative; margin-top:60px; z-index:50; }
+#header .logo_box { position:absolute; left:55px; }
+#header .logo_box #logo {}
+#header .logo_box #logo a {width:60px; height:56px; display:block; background:url("../images/w_logo.png") no-repeat; text-indent:-99999px; }
+#header .top_menu { position:absolute; right:55px;}
+#header .top_menu li { margin-left:18px; display:inline-block;}
+#header .top_menu li:first-child {}
+#header .top_menu li a { color:#fff; font-size:18px;}
+#header .top_menu li a:hover { text-decoration:underline;} */
+
+
+
+
+h3 { letter-spacing:8px; font-size:28px; text-align:center; padding-top:70px;}
+h4 { font-size:23px; color:#132882; font-weight:bold; margin-top:60px;}
+.basic { margin-top:20px;}
+ul.basic {margin-top:30px; font-size:16px; line-height:180%;}
+.ul-info strong { width:120px; display:inline-block;}
+
+.c_fff { color:#fff !important;}
+.c_333 { color:#333 !important;}
+
+.fleft { float:left;}
+.fright { float:right;}
+
+span.next { display:block;}
+.photo1,.photo2 { margin-top:30px;}
+.photo2 li { float:left; margin-left:2%; width: 49%; }
+.photo2 li:first-child { margin-left:0}
+.line_dot { display:block; position: relative; z-index: 1; border-bottom:1px dashed #ddd; width:100%; padding-top:25px;}
+
+.mal0 { margin-left:0 !important;}
+.mar0 { margin-right:0 !important;}
+.mat0 { margin-top:0 !important;}
+.mab0 { margin-bottom:0 !important;}
+.pad60 { padding:60px 0;}
+
+.c_box{ background: url("../images/sub/box_pattern.gif"); display:inline-block; width:100%; margin-top: 25px;}
+.c_box .in_box{background: #fff; margin: 6px; padding: 18px 20px;}
+.c_box .in_box h4{margin-top:18px; margin-bottom: 5px; color: #1f2f46; font-size: 17px; background: none; padding: 0;}
+.c_box .in_box h3{margin-top:6px; margin-bottom: 5px; color: #1f2f46; font-size: 17px; background: none; padding: 0;}
+.c_box p.basic, .c_box2 ul.basic, .c_box2 ol.basic { margin-top:0;}
+.c_box .in_box h4.c0, .in_box h3.c0{ margin-top:0px;}
+.c_box p.basic, .c_box ul.basic, .c_box ol.basic { margin-top:0;}
+
+
+/* 서브 레이아웃 공통 e */
+
+
+
+/******** sub page ********/
+
+.sub .main_vis {  text-align: center; box-sizing: border-box; transition: .3s ease; height: 300px; background: url("../../resources/img/sub/sub_bg1.jpg") top no-repeat; background-size: cover; position: relative; top: 0; width: 100%; background-attachment: fixed;}
+.sub .main_vis.vis_active { height: 100px;}
+
+/* portfolio */
+.main_vis::before { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.2 ); content: '';}
+.main_vis .vis_tit {position: absolute; top: 50%; transform: translate3d(-50%, -50%, 0); left: 50%; font-size: 30px; font-weight: 600; color: #fff;}
+.portfolio_wrap { box-sizing: border-box; position: relative;}
+.portfolio_wrap .sort_btn { top: -40px; position: absolute; z-index: 2; font-size: 0; transition: .3s ease; left: 70px;}
+.portfolio_wrap .sort_btn.fixed { position: fixed; top: 0; transform: translateY(16vh);}
+.portfolio_wrap .sort_btn li {display: block;}
+.portfolio_wrap .sort_btn li a { line-height: 125%; font-size: 100px; letter-spacing: -1.8px; display: inline-block; font-weight: 600;}
+.portfolio_wrap .sort_btn li .active { text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;   color:#fff}
+
+.portfolio_wrap .portfolio_type {  margin: 70px 30px 0 380px; }
+.portfolio_wrap .portfolio_item { display: inline-block; width: 31%; margin: 0 1% 30px;  }
+.portfolio_wrap .portfolio_item > a {display: block; position: relative;}
+.portfolio_wrap .portfolio_item .photobox { overflow: hidden; position: relative; transition: .5s ease-in-out; width: 100%; height: 450px;}
+.portfolio_wrap .portfolio_item .photobox::before { content: ''; display: block; position: absolute; top: 0; left: 0; transition:.3s cubic-bezier(0.96, 0.1, 0.4, 0.82); z-index: 1; width: 100%; height: 100%;}
+.portfolio_wrap .portfolio_item .photobox img { position: absolute; top: 50%; left: 50%; width: 100%; transform: translate3d(-50%, -50%, 0) scale(1.2); transition:.5s cubic-bezier(0.96, 0.1, 0.4, 0.82); /*filter: blur(5px); -webkit-filter: blur(5px);*/}
+/* .portfolio_wrap .portfolio_item .titbox { text-shadow: 1px 1px 1px rgba(0,0,0,.2); white-space: nowrap; transition: .3s ease; position: absolute; bottom: 40px; left: 40px; color: #fff; font-weight: 600; font-size: 18px; z-index: 1; } */
+.portfolio_wrap .portfolio_item .titbox { white-space: nowrap; transition: .3s ease-in-out;  font-weight: 600; font-size: 18px; z-index: 1; position: relative; margin-top: 20px; }
+.portfolio_wrap .portfolio_item:hover .photobox::before { background: rgba(0,0,0,0.4);}
+.portfolio_wrap .portfolio_item:hover .photobox img {transform: translate3d(-50%, -50%, 0) scale(1); filter: blur(0); -webkit-filter: blur(0);}
+/* .portfolio_wrap .portfolio_item:hover .titbox { text-shadow: 1px 1px 1px rgba(0,0,0,.2); bottom: 50%; transform: translate3d(-50%, 50%, 0); left: 50%; font-size: 25px;} */
+.portfolio_wrap .portfolio_item:hover .titbox { color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,.2); transform: translate3d(35px, -80px, 0); font-size: 25px;}
+
+@media screen and (max-width:1400px) {
+.portfolio_wrap .portfolio_item { width: 48%;}
+}
+
+@media screen and (max-width:1200px) {
+.portfolio_wrap { margin: 70px 0 0; padding: 0 20px;}
+.portfolio_wrap .portfolio_type {margin: 0;}
+.portfolio_wrap .sort_btn { position: relative; left: 0; text-align: center;}
+.portfolio_wrap .sort_btn.fixed { position: relative; transform: none;}
+.portfolio_wrap .sort_btn li { display: inline-block; margin-left: 10px;}
+.portfolio_wrap .sort_btn li:first-child { margin-left: 0;}
+.portfolio_wrap .sort_btn li a { font-size: 25px; border-radius: 50px; padding: 5px 18px; letter-spacing: 1px; border: 1px solid #eee;}
+.portfolio_wrap .sort_btn li .active { text-shadow: none; border-color: #000001; background: #000;}
+.portfolio_wrap .portfolio_item { width: 100%; margin: 0 0 30px;}
+}
+
+
+@media screen and (max-width:768px) {
+.portfolio_wrap .sort_btn li a { font-size: 18px; font-weight: 300;}
+}
