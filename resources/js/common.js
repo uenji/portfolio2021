@@ -46,9 +46,9 @@ $(document).ready(function(){
 	
 
 	
-	//header include
+	//include
 	$("#header").load("/portfolio2021/inc/header_index.html");
-
+	$("#footer").load("/portfolio2021/inc/footer.html");
 	
 	//ham menu
 	$(document).on("click", ".ham_button", function() {

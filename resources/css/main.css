@@ -91,11 +91,6 @@
 .project_thumbs .more_btn.hover .top {transform: rotate(-45deg);}
 .project_thumbs .more_btn.hover .bottom {transform: rotate(45deg);} */
 
-.left_fixed { position: fixed; display: none; left: 70px; bottom: 46px; z-index: 100;}
-.left_fixed a {display: block; width: 45px; height: 45px; border-radius: 100px; text-indent: -99999px; background:#fff url("../../resources/img/main/tistory.svg") no-repeat center; background-size: 18px; transition: .3s ease; }
-.left_fixed a.github { background:#fff url("../../resources/img/main/git_ico.png") no-repeat center; margin-top: 12px; fill: blue;}
-.left_fixed a:hover {background-color: #f9f9f9;}
-
 .aboutme1 {background: #ffe5b9; padding:124px 0 100px; position: relative;}
 .aboutme1 .inner { display: inline-block; height: 100%; width: 100%;}
 .aboutme1::after { content: ''; display: block; clear: both;}
@@ -259,8 +254,6 @@
 @media screen and (max-width:768px) {
     
 .inner { padding: 0 20px; }
-.left_fixed { left: 20px; bottom: 20px; display: none;}
-.left_fixed a {display: inline-block; width: 35px; height: 35px;}
 .projects { padding: 70px 0; height: auto; min-height: auto; }
 .projects .wrap_tit { font-size: 25px;}
 

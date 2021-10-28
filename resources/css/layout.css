@@ -54,6 +54,15 @@
 .ham_button.active i.last { width: 100%; position: absolute; left:0; bottom: 0;}
 
 
+
+.left_fixed { position: fixed; display: none; left: 70px; bottom: 46px; z-index: 100;}
+.left_fixed a {display: block; width: 45px; height: 45px; border-radius: 100px; text-indent: -99999px; background:#fff url("../../resources/img/main/tistory.svg") no-repeat center; background-size: 18px; transition: .3s ease; }
+.left_fixed a.github { background:#fff url("../../resources/img/main/git_ico.png") no-repeat center; margin-top: 12px; fill: blue;}
+.left_fixed a.notion { background:#fff url("../../resources/img/main/notion_ico.png") no-repeat center; margin-top: 12px; fill: blue;}
+.left_fixed a:hover {background-color: #f9f9f9;}
+
+
+
 @media screen and (max-width:1400px){
 .header.scroll .ham_button.active, .ham_button.active {transform: translate3d(-30vw, 78vh, 0);}
 .header > .gnb { margin-right: 80px;}
@@ -80,6 +89,9 @@
 /* .header.scroll .ham_button.active, .ham_button.active {transform: translate3d(-70vw, 80vh, 0);} */
 .header.scroll .ham_button.active, .ham_button.active { right: 5%; top: 30px;}
 .mobile_menu .gnb ul > li > a { font-size: 30px;}
+
+.left_fixed { left: 20px; bottom: 20px; display: none;}
+.left_fixed a {display: inline-block; width: 35px; height: 35px;}
 
 .footer .copyright { margin: 50px 0; letter-spacing: 1px;}
 }
