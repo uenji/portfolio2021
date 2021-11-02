@@ -55,7 +55,7 @@ span.next { display:block;}
 
 /******** sub page ********/
 
-.sub .main_vis {  text-align: center; box-sizing: border-box; transition: .3s ease; height: 300px; background: url("../../resources/img/sub/sub_bg1.jpg") top no-repeat; background-size: cover; position: relative; top: 0; width: 100%; background-attachment: fixed;}
+.sub .main_vis {  text-align: center; box-sizing: border-box; transition: .3s ease; height: 300px; background: url("../../resources/img/sub/sub_bg1.jpg") no-repeat; background-size: cover; position: relative; top: 0; width: 100%; background-attachment: fixed; background-position: top;}
 .sub .main_vis.vis_active { height: 100px;}
 
 /* portfolio */
@@ -69,16 +69,15 @@ span.next { display:block;}
 .portfolio_wrap .sort_btn li .active { text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;   color:#fff}
 
 .portfolio_wrap .portfolio_type {  margin: 70px 30px 0 380px; }
-.portfolio_wrap .portfolio_item { display: inline-block; width: 31%; margin: 0 1% 30px;  }
-.portfolio_wrap .portfolio_item > a {display: block; position: relative;}
-.portfolio_wrap .portfolio_item .photobox { overflow: hidden; position: relative; transition: .5s ease-in-out; width: 100%; height: 450px;}
+.portfolio_wrap .portfolio_item { display: inline-block; width: 31%; margin: 0 1% 30px; }
+.portfolio_wrap .portfolio_item .link { overflow: hidden; width: 100%; display: block; position: relative;}
+.portfolio_wrap .portfolio_item .photobox {padding-top: 100%; display: block; overflow: hidden; position: relative; transition: .5s ease-in-out; width: 100%; }
 .portfolio_wrap .portfolio_item .photobox::before { content: ''; display: block; position: absolute; top: 0; left: 0; transition:.3s cubic-bezier(0.96, 0.1, 0.4, 0.82); z-index: 1; width: 100%; height: 100%;}
-.portfolio_wrap .portfolio_item .photobox img { position: absolute; top: 50%; left: 50%; width: 100%; transform: translate3d(-50%, -50%, 0) scale(1.2); transition:.5s cubic-bezier(0.96, 0.1, 0.4, 0.82); /*filter: blur(5px); -webkit-filter: blur(5px);*/}
-/* .portfolio_wrap .portfolio_item .titbox { text-shadow: 1px 1px 1px rgba(0,0,0,.2); white-space: nowrap; transition: .3s ease; position: absolute; bottom: 40px; left: 40px; color: #fff; font-weight: 600; font-size: 18px; z-index: 1; } */
+.portfolio_wrap .portfolio_item .photobox img { position: absolute; top:0; left:0; right: 0; bottom: 0; width: 100%; transform: scale(1.2); transition:.5s cubic-bezier(0.96, 0.1, 0.4, 0.82); /*filter: blur(5px); -webkit-filter: blur(5px);*/}
+
 .portfolio_wrap .portfolio_item .titbox { white-space: nowrap; transition: .3s ease-in-out;  font-weight: 600; font-size: 18px; z-index: 1; position: relative; margin-top: 20px; }
 .portfolio_wrap .portfolio_item:hover .photobox::before { background: rgba(0,0,0,0.4);}
-.portfolio_wrap .portfolio_item:hover .photobox img {transform: translate3d(-50%, -50%, 0) scale(1); filter: blur(0); -webkit-filter: blur(0);}
-/* .portfolio_wrap .portfolio_item:hover .titbox { text-shadow: 1px 1px 1px rgba(0,0,0,.2); bottom: 50%; transform: translate3d(-50%, 50%, 0); left: 50%; font-size: 25px;} */
+.portfolio_wrap .portfolio_item:hover .photobox img {transform: scale(1); filter: blur(0); -webkit-filter: blur(0);}
 .portfolio_wrap .portfolio_item:hover .titbox { color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,.2); transform: translate3d(35px, -80px, 0); font-size: 25px;}
 
 @media screen and (max-width:1400px) {
@@ -94,10 +93,15 @@ span.next { display:block;}
 .portfolio_wrap .sort_btn li:first-child { margin-left: 0;}
 .portfolio_wrap .sort_btn li a { font-size: 25px; border-radius: 50px; padding: 5px 18px; letter-spacing: 1px; border: 1px solid #eee;}
 .portfolio_wrap .sort_btn li .active { text-shadow: none; border-color: #000001; background: #000;}
-.portfolio_wrap .portfolio_item { width: 100%; margin: 0 0 30px;}
+
+.sub .main_vis { background-position: left; background-attachment: scroll;}
 }
 
 
 @media screen and (max-width:768px) {
+.main_vis::before { content:''; display: block; width: 100%; height: 100%; background:rgba(255,255,255,.2); position: absolute; left: 0; top: 0;}
+
 .portfolio_wrap .sort_btn li a { font-size: 18px; font-weight: 300;}
+.portfolio_wrap .portfolio_item { width: 100%; margin: 0 0 30px;}
+/* .portfolio_wrap .portfolio_item .photobox {padding-top: 75%;} */
 }
