@@ -341,7 +341,7 @@ $(document).ready(function(){
 				// }
 
 				// ie > 크로스브라우징 문제로 인해 hide
-				document.querySelectorAll(".cursor").style.display = "none";
+				document.getElementById("cursor").style.display = "none";
 			}
 			
 			// chrome

@@ -95,6 +95,9 @@ span.next { display:block;}
 .portfolio_wrap .sort_btn li .active { text-shadow: none; border-color: #000001; background: #000;}
 
 .sub .main_vis { background-position: left; background-attachment: scroll;}
+
+.portfolio_wrap .portfolio_item:hover .titbox { font-size: 20px;}
+
 }
 
 
