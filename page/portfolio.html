@@ -66,10 +66,10 @@
                     
                 </div>
 
-                <input type="text" id="port_start" value="12">
-                <input type="text" id="port_size" value="8">
-                <input type="text" id="port_line" value="3">
-                <a href="#none" onclick="show_port_liset();">더보기</a>
+                <input type="text" id="port_start" class="list_inp" value="12">
+                <input type="text" id="port_size" class="list_inp" value="8">
+                <input type="text" id="port_line" class="list_inp" value="3">
+                <a href="#none" class="pt_more" onclick="show_port_liset();">View more</a>
             </div>
         </div>
     </div>
@@ -97,27 +97,27 @@ $(document).ready(function(){
 });
 
 
-	// portfolio ajax e
-	function show_port_liset(){
-		var port_start = $('#port_start').val();
-		var port_size = $('#port_size').val();
-		var port_line = $('#port_line').val();
+// portfolio ajax s
+function show_port_liset(){
+    var port_start = $('#port_start').val();
+    var port_size = $('#port_size').val();
+    var port_line = $('#port_line').val();
 
-		var boxHeight = $('.portfolio_item').height();
+    var boxHeight = $('.portfolio_item').height();
 
-		$.ajax({
-				url : "/portfolio2021/inc/portfolio_list.html?start="+port_start+"&size="+port_size+"&line="+port_line,
-				success : function(result) {
-				  $("#lists").append($(result).animate({top:0, height:boxHeight},500));
-					$('#port_start').val((port_start*1)+(port_size*1));
-				}
-			});
+    $.ajax({
+            url : "/portfolio2021/inc/portfolio_list.html?start="+port_start+"&size="+port_size+"&line="+port_line,
+            success : function(result) {
+                $("#lists").append($(result));
+                $('#port_start').val((port_start*1)+(port_size*1));
+            }
+        });
 
-			$(window).resize(function(){
-			  $('.portfolio_item').css('height','auto');
-			}).resize();
+        // $(window).resize(function(){
+        //     $('.portfolio_item').css('height','auto');
+        // }).resize();
 
-  }
+}
 
 </script>
 </body>
