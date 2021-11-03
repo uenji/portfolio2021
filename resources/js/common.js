@@ -318,7 +318,6 @@ $(document).ready(function(){
 		}
 	});
 
-
 	$(window).resize(function (){   
 		// width값을 가져오기
 		var width_size = window.outerWidth;
@@ -414,7 +413,7 @@ $(document).ready(function(){
 	
 
 
-	// tweenMax
+	// tweenMax s
 	var controller = new ScrollMagic.Controller();
 	var tweenTxt = TweenMax.to('.tweenTxt1', 5, {
 		x: "-60%"
@@ -438,7 +437,57 @@ $(document).ready(function(){
 	.setClassToggle('.info1', 'active')
 	.setTween(tweenTxt2)
 	.addTo(controller)
+
+	// main
+	var controller = new ScrollMagic.Controller({
+		globalSceneOptions: {triggerHook: "onEnter"}
+	  });
+	  new ScrollMagic
+		.Scene({triggerElement: "#contactus", duration: "200%"})
+		.setTween("#contactus > .bg", {y: "20%", ease: Linear.easeNone})
+		.addTo(controller);
+	  
 	 
+	// tweenMax e
+
+
+	// IE로 접속 시 edge로 전환
+	if(navigator.userAgent.indexOf("Trident") > 0){
+
+	
+		document.querySelector("body").style.overflow = "hidden";
+		let targetTag = document.querySelector("body");
+		let addTag = document.createElement("div");
+		addTag.setAttribute('class', 'popup_layer');
+	
+		addTag.innerHTML = "<div class='pop_bg'></div><div class='pop_cont'><i class='ico'></i><p class='pop_txt'>해당 사이트는 Microsoft Edge, Chrome 브라우저에 최적화 되어있습니다. <br>원활한 사용을 위해 잠시 후 Edge 브라우저로 이동됩니다.</p></div>";
+		
+		targetTag.appendChild(addTag);
+
+		setTimeout(function() {
+			window.location.href = 'microsoft-edge:https://uenji.github.io/portfolio2021/';
+		}, 4000);
+
+	}
+	else if(/MSIE \d |Trident.*rv:/.test(navigator.userAgent)){
+	
+		document.querySelector("body").style.overflow = "hidden";
+		let targetTag = document.querySelector("body");
+		let addTag = document.createElement("div");
+		addTag.setAttribute('class', 'popup_layer');
+
+		addTag.innerHTML = "<div class='pop_bg'></div><div class='pop_cont'><i class='ico'></i><p class='pop_txt'>해당 사이트는 Microsoft Edge, Chrome 브라우저에 최적화 되어있습니다. <br>원활한 사용을 위해 잠시 후 Edge 브라우저로 이동됩니다.</p></div>";
+		
+		targetTag.appendChild(addTag);
+
+		setTimeout(function() {
+			window.location.href = 'microsoft-edge:https://uenji.github.io/portfolio2021/';
+		}, 4000);
+
+	}
+
+
+
 	 
 // end
 
