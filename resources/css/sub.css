@@ -68,7 +68,7 @@ span.next { display:block;}
 .portfolio_wrap .sort_btn li a { line-height: 125%; font-size: 100px; letter-spacing: -1.8px; display: inline-block; font-weight: 600;}
 .portfolio_wrap .sort_btn li .active { text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;   color:#fff}
 
-.portfolio_wrap .portfolio_type {  margin: 70px 30px 0 380px; }
+.portfolio_wrap .portfolio_type { margin: 70px 30px 0 380px; }
 .portfolio_wrap .portfolio_item { display: inline-block; width: 31%; margin: 0 1% 30px; }
 .portfolio_wrap .portfolio_item .link { overflow: hidden; width: 100%; display: block; position: relative;}
 .portfolio_wrap .portfolio_item .photobox {padding-top: 100%; display: block; overflow: hidden; position: relative; transition: .5s ease-in-out; width: 100%; }
@@ -81,8 +81,9 @@ span.next { display:block;}
 .portfolio_wrap .portfolio_item:hover .titbox { color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,.2); transform: translate3d(35px, -80px, 0); font-size: 25px;}
 
 /* portfolio ajax */
-.portfolio_wrap .list_inp { visibility: hidden;}
-.portfolio_wrap .pt_more { display: inline-block; width: 800px; max-width: 90%; text-align: center; padding: 20px; border: 1px solid #000; box-sizing: border-box; margin: 30px 0 0 380px; }
+.portfolio_wrap .list_inp { visibility: hidden; position: absolute; top: 0; left: 0; width: 1px; height: 1px;}
+.portfolio_wrap .pt_btn { text-align: center;  margin: 30px 0 0 380px; }
+.portfolio_wrap .pt_btn .pt_more { display: inline-block; width: 800px; max-width: 90%; text-align: center; padding: 20px; border: 1px solid #000; box-sizing: border-box;}
 
 
 @media screen and (max-width:1400px) {
@@ -92,6 +93,7 @@ span.next { display:block;}
 @media screen and (max-width:1200px) {
 .portfolio_wrap { margin: 70px 0 0; padding: 0 20px;}
 .portfolio_wrap .portfolio_type {margin: 0;}
+.portfolio_wrap .pt_btn {margin-left: 0;}
 .portfolio_wrap .sort_btn { position: relative; left: 0; text-align: center;}
 .portfolio_wrap .sort_btn.fixed { position: relative; transform: none;}
 .portfolio_wrap .sort_btn li { display: inline-block; margin-left: 10px;}

@@ -63,13 +63,75 @@
                     <li><a href="#none" data-filter=".shopping">Shop</a></li>
                 </ul>
                 <div class="portfolio_type" id="lists">
-                    
+                    <!-- -->
+
+                    <div class="portfolio_item business">
+                        <a href="http://clearwinkorea.com/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg17.jpg" alt="클리어윈코리아">
+                            </div>
+                            <div class="titbox">
+                                클리어윈코리아
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="https://www.bridgetec.co.kr/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg18.jpg" alt="브리지텍">
+                            </div>
+                            <div class="titbox">
+                                브리지텍
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="http://hanamcityfc.com/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg52.jpg" alt="하남시티유소년축구클럽">
+                            </div>
+                            <div class="titbox">
+                                하남시티유소년축구클럽
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="http://www.wavetec.co.kr/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg51.jpg" alt="웨이브테크놀로지">
+                            </div>
+                            <div class="titbox">
+                                웨이브테크놀로지
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="http://jkmuse.co.kr/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg3.jpg" alt="JK&amp;MUSE">
+                            </div>
+                            <div class="titbox">
+                                JK&amp;MUSE
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="http://event.lucete.academy/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg50.jpg" alt="루체테 이벤트">
+                            </div>
+                            <div class="titbox">
+                                루체테 이벤트
+                            </div>
+                        </a>
+                    </div>
+                    <!-- -->
                 </div>
 
-                <input type="text" id="port_start" class="list_inp" value="12">
+                <input type="text" id="port_start" class="list_inp" value="3">
                 <input type="text" id="port_size" class="list_inp" value="8">
                 <input type="text" id="port_line" class="list_inp" value="3">
-                <a href="#none" class="pt_more" onclick="show_port_liset();">View more</a>
+                <div class="pt_btn"><a href="#none" class="pt_more" onclick="show_port_liset();">View more</a></div>
             </div>
         </div>
     </div>
@@ -108,14 +170,14 @@ function show_port_liset(){
     $.ajax({
             url : "/portfolio2021/inc/portfolio_list.html?start="+port_start+"&size="+port_size+"&line="+port_line,
             success : function(result) {
-                $("#lists").append($(result));
+                $("#lists").append($(result).animate({height:boxHeight},500));
                 $('#port_start').val((port_start*1)+(port_size*1));
             }
         });
 
-        // $(window).resize(function(){
-        //     $('.portfolio_item').css('height','auto');
-        // }).resize();
+        $(window).resize(function(){
+            $('.portfolio_item').css('height','auto');
+        }).resize();;
 
 }
 
