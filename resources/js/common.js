@@ -487,6 +487,64 @@ $(document).ready(function(){
 	}
 
 
+	// portfolio ajax s
+	/*
+	var curpage = 1; //현재페이지  
+	var scrollchk = true; //스크롤 체크 여부 플래그  
+	var totallist; //ajax로 받아온 list를 이 변수에 계속 누적시킴  
+
+	var loadlist = function(){  
+		var url = cb_url + '/board/lists/'+id;  
+		$.ajax({  
+			url : '/portfolio2021/inc/portfolio_list.html',  
+			type : 'get',  
+			dataType : 'html',  
+			success : function(list) {  
+				if(list.length > 3){  
+					curpage++;  ///데이터를 받아오는데 성공했고 추가할 페이지가 있으면 현재 페이지를 늘려준다.  
+					$('#lists').append(list);   ///html에 받아온 리스트를 추가해주고  
+					totallist += list;        ///totallist에 차곡차곡 누적시켜준다.  
+					history.replaceState({list:totallist, page:curpage},'Page '+curpage, 'board/list##'); //이부분이 핵심인데 현재 페이지의 주소에 ## 이라는 앵커를 넣어줌으로서 이 페이지에 1회이상 페이지 로딩이 있었다는 표시를 해준다.  
+					//replaceState라는것은 현재페이지 히스토리를 변경하는 함수이고  
+					//pushState를 추가를 하는 함수인데 replaceState로 해야 현재 리스트에서 백스페이스시 뒤 페이지로 가기때문이다.   
+					//중요한부분은 replaceState(데이터,타이틀,URL)에서 데이터부분인데 현재까지 계속 로딩해서 받아온 데이터를 저장시켜준다. 그리고 불러온 후 현재페이지도 세팅해야 하므로 현재 페이지도 데이터 부분에 넣어준다.  
+				}  
+				scrollchk = true; //데이터 로딩이 끝나면 스크롤체크를 풀어준다.  
+				mutex = false; //데이터로딩이 끝나면 ajax접근권한을 준다(중복호출 방어)  
+			}  
+		});  
+	}  
+
+	$(window).scroll(function(){  
+		if(scrollchk){ ///새로고침이나 뒤로가기시 스크롤이 밑으로가있으면 로딩체크를하며 알람메시지가뜨므로 페이지를 완전히 세팅후 스크롤체크를 하도록 방어처리  
+			if($(window).scrollTop() >= $(document).height() - $(window).height()){  
+				if(mutex){  
+					alert('다음페이지를 로딩중입니다.');  
+					return;  
+				}  
+				mutex = true;  
+				loadlist();  
+			}  
+		}  
+	});  
+
+	if(location.hash){  //현재 주소에 ##이라는앵커가 박혀있을경우 true가 발생한다.  
+						//앵커가 박혔다는것은 새 페이지 진입이아니라 한번이라도 로딩이 있었던 페이지이므로  
+						//뒤로가기로 왔다는 뜻이된다.  
+		var data = history.state; //아까 데이터로 보낸부분이 history.state에 저장이되어있다.  
+		if(data){  
+			scrollchk = false; //데이터를 세팅하는동안 스크롤 체크를 하지않게하자.  
+			$('#lists').append(data.list);   //저장된 데이터를 뿌려준다.  
+			curpage = data.page;     //저장되었던 마지막 페이지를 세팅  
+			scrollchk = true;  //데이터 세팅 종료 후 스크롤 체크  
+		}  
+	}
+
+	*/
+
+	// portfolio ajax e
+
+
 
 	 
 // end
