@@ -125,13 +125,43 @@
                             </div>
                         </a>
                     </div>
+                    <div class="portfolio_item business">
+                        <a href="https://www.icjg-woman.or.kr/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg49.jpg" alt="인천중구여성회관">
+                            </div>
+                            <div class="titbox">
+                                인천중구여성회관
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item business">
+                        <a href="http://subong.or.kr/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg48.jpg" alt="인천수봉문화회관">
+                            </div>
+                            <div class="titbox">
+                                인천수봉문화회관
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio_item shopping">
+                        <a href="http://www.lafoi.kr/shop/" class="link" title="새 창 열기" target="_blank">
+                            <div class="photobox">
+                                <img src="../resources/img/sub/pf_bg53.jpg" alt="라프와">
+                            </div>
+                            <div class="titbox">
+                                라프와
+                            </div>
+                        </a>
+                    </div>
                     <!-- -->
                 </div>
 
-                <input type="text" id="port_start" class="list_inp" value="3">
-                <input type="text" id="port_size" class="list_inp" value="8">
-                <input type="text" id="port_line" class="list_inp" value="3">
-                <div class="pt_btn"><a href="#none" class="pt_more" onclick="show_port_liset();">View more</a></div>
+                <input type="text" id="p_start" class="list_inp" value="9">
+                <input type="text" id="p_size" class="list_inp" value="9">
+                <input type="text" id="p_line" class="list_inp" value="3">
+                <div class="pt_btn"><a href="#none" class="pt_more" onclick="more_list();">View more</a></div>
             </div>
         </div>
     </div>
@@ -153,33 +183,37 @@ $(document).ready(function(){
         $(this).addClass('active'); 
     });
 
-
-    
-
 });
 
-
 // portfolio ajax s
-function show_port_liset(){
-    var port_start = $('#port_start').val();
-    var port_size = $('#port_size').val();
-    var port_line = $('#port_line').val();
 
-    var boxHeight = $('.portfolio_item').height();
+function more_list(){
+var p_start = $('#p_start').val();
+var p_size = $('#p_size').val();
+var p_line = $('#p_line').val();
+var itemHeight = $('.portfolio_item').height();
 
-    $.ajax({
-            url : "/portfolio2021/inc/portfolio_list.html?start="+port_start+"&size="+port_size+"&line="+port_line,
-            success : function(result) {
-                $("#lists").append($(result).animate({height:boxHeight},500));
-                $('#port_start').val((port_start*1)+(port_size*1));
-            }
-        });
+$.ajax({
+        url : "/portfolio2021/inc/portfolio_list.html?start="+p_start+"&size="+p_size+"&line="+p_line,
+        success : function(result) {
+        // $("#port_list").append(result);
 
-        $(window).resize(function(){
-            $('.portfolio_item').css('height','auto');
-        }).resize();;
+            $("#lists").append($(result));
+
+            $('#p_start').val((p_start*1)+(p_size*1));
+
+        }
+
+
+    });
+    $(window).resize(function(){
+        $('.portfolio_item').css('height','auto');
+    }).resize();
 
 }
+
+
+
 
 </script>
 </body>
