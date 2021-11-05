@@ -26,7 +26,7 @@
 
 ## Contact
 ```
-:email: E-mail: exnji.work@gmail.com
+E-mail: exnji.work@gmail.com
 ```
 
 ----------
