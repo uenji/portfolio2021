@@ -6,45 +6,15 @@ $(document).ready(function(){
 		event.preventDefault();
 		var $anchor = $(this);
 		$('html, body').stop().animate({
-			scrollTop: ($($anchor.attr('id')).offset().top)
+			scrollTop: ($($anchor.attr('href')).offset().top)
 		}, 1250, 'easeInOutExpo');
 	});
 	
-	/* lnb */
-	$('.m_btn').on('click', function(event) {
-		event.preventDefault();
-		if($(this).hasClass('active')) {
-			$('.m_btn').removeClass('active');
-		} else {
-			$('.m_btn').addClass('active');
-		}
-		$('.cont01 .snb ul').toggle();
-	});
-	
-	
-  
 	
 	$('.top_btn a').click('click', function(event) {
 		event.preventDefault();
 		$('html, body').stop().animate({scrollTop: 0}, 1000);
 	});	
-	
-	/* gnb 호버 */
-   $('.gnb li > a')
-    .on('mouseenter', function(e) {
-	var parentOffset = $(this).offset(),
-	relX = e.pageX - parentOffset.left,
-	relY = e.pageY - parentOffset.top;
-	$(this).find('span').css({top:relY, left:relX})
-    })
-	.on('mouseout', function(e) {
-	var parentOffset = $(this).offset(),
-	relX = e.pageX - parentOffset.left,
-	relY = e.pageY - parentOffset.top;
-	$(this).find('span').css({top:relY, left:relX})
-	});
-	
-
 	
 	//include
 	$("#header").load("/portfolio2021/inc/header_index.html");
@@ -149,8 +119,6 @@ $(document).ready(function(){
 			}
 		});
 
-
-
 		//main polygon
 		var scroll = $(this).scrollTop(),
 		$item1 = $('.poly1'),
@@ -168,8 +136,6 @@ $(document).ready(function(){
 
 		$item5.css({'transform': 'translate3d(' + 0 + 'px, ' + scroll * -0.02+ 'px, ' + 0 + 'px )'});
 		$item6.css({'transform': 'translate3d(' + 0 + 'px, ' + scroll * -0.01+ 'px, ' + 0 + 'px )'});
-
-
 
 	});
 	
@@ -321,12 +287,6 @@ $(document).ready(function(){
 	$(window).resize(function (){   
 		// width값을 가져오기
 		var width_size = window.outerWidth;
-		if (width_size <= 665 ) {
-			$(".port_box").addClass("m_port_box");
-		} else {
-			$(".port_box").removeClass("m_port_box");
-			$('.cont01 .snb ul').show();
-		}
 		// mouse cursor
 		if (width_size >= 768) {
 // 
