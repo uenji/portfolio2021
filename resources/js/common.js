@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});	
 	
 	//include
-	$("#header").load("/portfolio2021/inc/header_index.html");
+	// $("#header").load("/portfolio2021/inc/header_index.html");
 	$("#footer").load("/portfolio2021/inc/footer.html");
 	
 	//ham menu
@@ -27,6 +27,11 @@ $(document).ready(function(){
 	});
 
 	$(document).on("click", ".ham_button.active", function() {
+		$(".mobile_menu").removeClass("open");
+		$(".ham_button").removeClass("active");
+	});
+
+	$(".mobile_menu .gnb ul > li > a").click(function() {
 		$(".mobile_menu").removeClass("open");
 		$(".ham_button").removeClass("active");
 	});
