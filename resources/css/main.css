@@ -94,7 +94,7 @@
 .project_thumbs .more_btn.hover .top {transform: rotate(-45deg);}
 .project_thumbs .more_btn.hover .bottom {transform: rotate(45deg);} */
 
-.aboutme1 {background: #ffe5b9; padding:124px 0 100px; position: relative;}
+.aboutme1 {background: #e2e8fa; padding:124px 0 100px; position: relative;}
 .aboutme1 .inner { display: inline-block; height: 100%; width: 100%;}
 .aboutme1::after { content: ''; display: block; clear: both;}
 .aboutme1 .wrap_tit { font-size: 65px; font-weight: 600; padding-bottom: 15px; border-bottom: 3px solid #000;  display: inline-block;}
@@ -140,10 +140,10 @@
 
 /* 스킬 퍼센테이지 */
 .progress {margin-top: 160px;}
-.progress .skill { box-sizing: border-box; max-width:100%;  margin-top:35px;}
+.progress .skill { box-sizing: border-box; max-width:100%;  margin-top:25px;}
 .progress .skill:first-child { margin-top: 0;}
 .progress .skill .name { font-size: 17px;}
-.progress .skill .boxing { margin-top: 30px; height: 12px; background-color: #eee; height:20px; border-radius:50px; position:relative;}
+.progress .skill .boxing { margin-top: 15px; background-color: #eee; height:20px; border-radius:50px; position:relative;}
 .progress .skill .skill_percent { height:100%; /* background:linear-gradient(to right, blue, red); */ width:0; transition: 2s ease-in-out; background: #000; border-radius: 50px;}
 .progress .skill .skill_percent .txt { color: #fff; font-size: 14px; float: right; margin-right: 10px;} 
 .skill_info {margin-top: 92px; overflow:hidden}
@@ -171,8 +171,8 @@
 .qna .list .item .question:active { cursor: url("../../resources/img/common/cursor2.png"), auto;}
 .qna .list .item .question.open { font-weight: 500; background-position: 15px center; padding-left: 40px;} 
 .qna .list .item .answer { background:#f9f9f9; padding: 30px 40px 40px; box-sizing: border-box; border-top: 1px dashed #ddd; display: none;}
-.qna .list .item .answer p { line-height: 160%;}
-
+.qna .list .item .answer p { line-height: 160%; margin-top: 15px;}
+.qna .list .item .answer p:first-child { margin-top: 0;}
 
 /* contact us */
 .contactus {position: relative; height: 500px; overflow: hidden;}

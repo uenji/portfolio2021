@@ -406,11 +406,21 @@ $(document).ready(function(){
 	// main
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {triggerHook: "onEnter"}
-	  });
-	  new ScrollMagic
-		.Scene({triggerElement: "#contactus", duration: "200%"})
-		.setTween("#contactus > .bg", {y: "20%", ease: Linear.easeNone})
-		.addTo(controller);
+	});
+	new ScrollMagic
+	.Scene({triggerElement: "#contactus", duration: "200%"})
+	.setTween("#contactus > .bg", {y: "20%", ease: Linear.easeNone})
+	.addTo(controller);
+
+	
+	var controller = new ScrollMagic.Controller();
+	var tween = TweenMax.to(".aboutme1", 0.2, {
+	  backgroundColor: "#ffe5b9",
+	})
+  
+	  var scene = new ScrollMagic.Scene({triggerElement: ".aboutme1 .ab_right .ab_tit.tit1", duration: 1000})
+	  .setTween(tween)
+	  .addTo(controller);
 	  
 	 
 	// tweenMax e
