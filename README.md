@@ -18,6 +18,7 @@
 
 ## Preview
 ![rdm](https://user-images.githubusercontent.com/48412711/139116978-82f6e071-47af-4c68-95b5-cf15ee363810.jpg)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fuenji.github.io%2Fportfolio2021&count_bg=%23E51C24&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com)
 
 
 ## Go to page
@@ -32,6 +33,3 @@ E-mail: exnji.work@gmail.com
 ----------
 ##### 이미지 출처
 + Readme.md 파일에 사용된 Mockup 이미지는 designwarrior - kr.freepik.com가 제작하였습니다.</a>
-
-
-
