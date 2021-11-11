@@ -146,7 +146,7 @@
 .progress .skill .boxing { margin-top: 15px; background-color: #eee; height:20px; border-radius:50px; position:relative;}
 .progress .skill .skill_percent { height:100%; /* background:linear-gradient(to right, blue, red); */ width:0; transition: 2s ease-in-out; background: #000; border-radius: 50px;}
 .progress .skill .skill_percent .txt { color: #fff; font-size: 14px; float: right; margin-right: 10px;} 
-.skill_info {margin-top: 92px; overflow:hidden}
+.skill_info {margin-top: 92px; overflow:hidden; position: relative; z-index: 1;}
 .skill_info .item { float: left; position: relative;}
 .skill_info .item .ico { width: 39px; height: 39px; background-image: url("../../resources/img/main/skill_icon1.png"); background-repeat: no-repeat; background-position: left center; display: inline-block;}
 .skill_info .item .ico0 {background-image: url("../../resources/img/main/skill_icon0.png"); } 
